@@ -21,16 +21,30 @@ router.post('/notes', (req, res) => {
     const readData = JSON.parse(data);
   
     readData.notes.push(note);
-
+//write file
     fs.writeFile('./data/notes.json', JSON.stringify(readData), err => {
         if (err) {
             console.log(err)
         }
+        location.reload();
         res.send(200)
-//write file
     });
 });
 });
+
+router.get('/notes/:id', (req, res) => {
+    const result = findById(req.params.id, notes);
+    if (result) {
+      res.json(result);
+    } else {
+      res.send(404);
+    }
+  });
+
+// router.delete('/note', (req, res) => {
+//     res.send("deleted")
+//     console.log("yaaa boi");
+// })
 
 module.exports  = router;
 
