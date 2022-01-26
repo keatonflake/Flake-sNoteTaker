@@ -1,14 +1,9 @@
-{
-  "notes": [
-    {
-      "id": "1",
-      "title": "Test Title",
-      "text": "Test text"
-    },
-    {
-      "id": "2",
-      "title": "hey there",
-      "text": "goes to college"
-    }
-  ]
+{"notes":[{"id":"1","title":"Test Title","text":"Test text"},{"id":"2","title":"hey there","text":"goes to college"},{"title":"new","text":"note","id":"ddfa1054-04db-4bd9-922d-54ec69ccb837"},{"title":"hey","text":"vsd","id":"b6c8efdb-3234-47d6-b4ad-8b63579af14b"},{"title":"regr","text":"ergr","id":"a291c039-287e-40fe-aa8b-4ddaa46a0eaa"
+        },
+        {
+            "title": "heyu",
+            "text": "fsdf",
+            "id": "fc3e3826-43a1-4496-bf44-f5ce3d580fea"
+        }
+    ]
 }

@@ -5,10 +5,11 @@ const { notes } = require('../../data/notes.json');
 
 // grabs all notes
 router.get('/notes', (req, res) => {
-    let results = notes
     
-    res.json(results);
-    console.log();
+  fs.readFile('./data/notes.json', "utf8", (err, data) => {
+    const fixedData = JSON.parse(data);  
+    res.json(fixedData)
+    });
 });
 
 router.post('/notes', (req, res) => {
@@ -26,7 +27,6 @@ router.post('/notes', (req, res) => {
         if (err) {
             console.log(err)
         }
-        location.reload();
         res.send(200)
     });
 });
